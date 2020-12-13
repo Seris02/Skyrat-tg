@@ -470,6 +470,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["medical_record"], medical_record)
 	READ_FILE(S["background_info"], background_info)
 	READ_FILE(S["exploitable_info"], exploitable_info)
+	READ_FILE(S["autohiss"], autohiss)
 
 	READ_FILE(S["mismatched_customization"] , mismatched_customization)
 	READ_FILE(S["allow_advanced_colors"] , allow_advanced_colors)
@@ -633,6 +634,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["medical_record"] , medical_record)
 	WRITE_FILE(S["background_info"] , background_info)
 	WRITE_FILE(S["exploitable_info"] , exploitable_info)
+	WRITE_FILE(S["autohiss"] , autohiss)
 
 	WRITE_FILE(S["mismatched_customization"] , mismatched_customization)
 	WRITE_FILE(S["allow_advanced_colors"] , allow_advanced_colors)
