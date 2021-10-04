@@ -27,7 +27,7 @@
 
 // *extremely bad russian accent* no!
 /datum/component/gunpoint/Initialize(mob/living/targ, obj/item/gun/wep)
-	if(!isliving(parent))
+	if(!isliving(parent) || !isliving(targ))
 		return COMPONENT_INCOMPATIBLE
 
 	var/mob/living/shooter = parent
