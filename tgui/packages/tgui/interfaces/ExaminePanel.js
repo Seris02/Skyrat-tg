@@ -52,12 +52,14 @@ export const ExaminePanel = (props, context) => {
                       {ooc_notes}
                     </Section>
                   </Stack.Item>
-                  <Stack.Item grow basis={0}>
-                    <Section scrollable fill title={(custom_species ? "Species: " + custom_species : "No Custom Species!")}
-                      preserveWhitespace>
-                      {(custom_species ? custom_species_lore : "Just a normal space dweller.")}
-                    </Section>
-                  </Stack.Item>
+                  {custom_species && (
+                    <Stack.Item grow basis={0}>
+                      <Section scrollable fill title={"Species: " + custom_species}
+                        preserveWhitespace>
+                        {custom_species_lore}
+                      </Section>
+                    </Stack.Item>
+                  )}
                 </Stack>
               </Stack.Item>
             </Stack>
