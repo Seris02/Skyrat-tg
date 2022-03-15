@@ -123,7 +123,7 @@
 			if(target && !check_purity(target))
 				if(target.loc == loc && isturf(target.loc)) //LADIES AND GENTLEMAN WE GOTEM PREPARE TO DUMP
 					start_washing()
-					if(mad)
+					if(mad && (obj_flags & EMAGGED))
 						speak("Well about fucking time you degenerate.", "Fucking finally.", "Thank god, you finally stopped.")
 						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
 						mad = FALSE
@@ -135,7 +135,7 @@
 						back_to_idle()
 						return
 					SSmove_manager.move_to(src, target, 0, currentspeed)
-					if(mad && prob(min(frustration * 2, 60)))
+					if(mad && prob(min(frustration * 2, 60)) && (obj_flags & EMAGGED))
 						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
 						speak(pick("Get back here you foul smelling fucker.", "STOP RUNNING OR I WILL CUT YOUR ARTERIES!", "Just fucking let me clean you you arsehole!", "STOP. RUNNING.", "Either you stop running or I will fucking drag you out of an airlock.", "I just want to fucking clean you you troglodyte.", "If you don't come back here I'll put a green cloud around you cunt."))
 					if((get_dist(src, target)) >= olddist)
